@@ -9,7 +9,7 @@ export async function Add (anime){
 
     const [resposta] = await conexao.query(comando, [anime.nome]);
     
-    anime.nome = resposta.insertId;
+    anime.id = resposta.insertId;
 
     return anime;
 }
